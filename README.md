@@ -1,5 +1,7 @@
 # NgSpaFw
 
+This project is based upon the PluralSight Building a Responsive SPA Framework with Angular course 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server
