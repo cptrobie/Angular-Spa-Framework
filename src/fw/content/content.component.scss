@@ -1,0 +1,8 @@
+$content-background-color: #f0fff0;
+
+// setting "content" to grow/shink
+:host {
+    display: flex;
+    background-color: $content-background-color;
+    flex-grow: 1;
+}
