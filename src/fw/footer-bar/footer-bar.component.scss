@@ -1,0 +1,7 @@
+@import '~variables.scss';
+
+.footer-bar {
+    display: flex;
+    min-height: 26px;
+    background-color: $footer-bar-background-color;
+}

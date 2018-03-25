@@ -1,8 +1,8 @@
-$content-background-color: #f0fff0;
+@import '~variables.scss';
 
 // setting "content" to grow/shink
 :host {
     display: flex;
-    background-color: $content-background-color;
+    background-color: $content-area-background-color;
     flex-grow: 1;
 }

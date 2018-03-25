@@ -1,3 +1,5 @@
+@import '~variables.scss';
+
 :host{
     display: flex;
 }
@@ -6,6 +8,7 @@
     display: flex;
     flex-grow: 1;
     min-height: 80px;
+    background-color: $header-bar-background-color;
 }
 
 .main-menu-area {
