@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ScreenService } from '../services/screen.service';
+
+
 @Component({
   selector: 'fw-footer-bar',
   templateUrl: './footer-bar.component.html',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrnSvc: ScreenService) { }
 
   ngOnInit() {
   }

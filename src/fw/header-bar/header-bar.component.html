@@ -1,4 +1,18 @@
-<div class='header-bar'>
+<div *screenSizeSmall class='header-bar-small'>
+  <span octicon='three-bars'></span>
+  <div class='small-image-holder'>
+    <img src='../../assets/logo.png' class='small-image' alt='Green Nations Logo'>
+  </div>
+  <span octicon='kebab-vertical'></span>
+</div>
+<div *screenSizeMedium class='header-bar'>  
+  <img src='../../assets/logo.png' alt='Green Nations Logo'>
+  <div class='main-menu-area'>
+    <fw-top-action-bar></fw-top-action-bar>
+     <!--menu-->
+  </div>
+</div>
+<div *screenSizeLarge class='header-bar-large'>
   <img src='../../assets/logo.png' alt='Green Nations Logo'>
   <div class='main-menu-area'>
     <fw-top-action-bar></fw-top-action-bar>

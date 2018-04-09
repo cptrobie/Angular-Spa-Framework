@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ScreenService } from '../services/screen.service';
+
+
 @Component({
   selector: 'fw-header-bar',
   templateUrl: './header-bar.component.html',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrnSvc: ScreenService) { }
 
   ngOnInit() {
   }

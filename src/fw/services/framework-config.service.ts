@@ -15,5 +15,4 @@ export class FrameworkConfigService {
   configure(settings: FrameworkConfigSettings):void {
     Object.assign(this, settings);
   }
-
 }
