@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { IconFiles } from './icon-files';
+import { IconFile } from './icon-file';
 import { FrameworkConfigSettings } from './framework-config-settings';
 
 
@@ -10,7 +10,7 @@ export class FrameworkConfigService {
   showUserControls = true;
   showStatusBar =true;
   showStatusBarBreakpoint = 0;
-  socialIcons = new Array<IconFiles>();
+  socialIcons = new Array<IconFile>();
 
   configure(settings: FrameworkConfigSettings):void {
     Object.assign(this, settings);

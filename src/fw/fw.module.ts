@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { ContentComponent } from './content/content.component';
 import { FrameworkBodyComponent } from './framework-body/framework-body.component';
@@ -13,11 +15,19 @@ import { ScreenService } from './services/screen.service';
 import { ScreenSizeLargeDirective } from './directives/screen-size-large.directive';
 import { ScreenSizeMediumDirective } from './directives/screen-size-medium.directive';
 import { ScreenSizeSmallDirective } from './directives/screen-size-small.directive';
+import { MenuService } from './services/menu.service';
+import { MenuComponent } from './menus/menu/menu.component';
+import { MenuItemComponent } from './menus/menu-item/menu-item.component';
+import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
+import { SignInComponent } from './users/sign-in/sign-in.component';
+import { RegisterComponent } from './users/register/register.component';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RouterModule 
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -29,10 +39,16 @@ import { ScreenSizeSmallDirective } from './directives/screen-size-small.directi
     OcticonDirective,
     ScreenSizeLargeDirective,
     ScreenSizeMediumDirective,
-    ScreenSizeSmallDirective
+    ScreenSizeSmallDirective,
+    MenuComponent,
+    MenuItemComponent,
+    PopupMenuComponent,
+    SignInComponent,
+    RegisterComponent
   ],
   providers: [
     FrameworkConfigService,
+    MenuService,
     ScreenService
   ],
   exports: [

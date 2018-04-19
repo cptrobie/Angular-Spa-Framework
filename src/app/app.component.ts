@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { FrameworkConfigService } from '../fw/services/framework-config.service';
 import { FrameworkConfigSettings } from '../fw/services/framework-config-settings';
+import { MenuService } from '../fw/services/menu.service';
+import { initialMenuItems } from './app.menu';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { FrameworkConfigSettings } from '../fw/services/framework-config-setting
 export class AppComponent {
  
  // provisioning of injected FrameworkConfigService
- constructor (private fcs: FrameworkConfigService) {
+ constructor (private fcs: FrameworkConfigService, private ms: MenuService) {
    let config: FrameworkConfigSettings = {
      socialIcons: [
        { imageFile:'assets/social-fb-bw.png', alt: 'Facebook', link: 'http://www.facebook.com' },
@@ -26,7 +28,7 @@ export class AppComponent {
    };
 
    fcs.configure(config);
-
+   ms.items = initialMenuItems;
  }
 
 }

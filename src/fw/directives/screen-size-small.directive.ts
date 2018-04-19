@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { ScreenService } from '../services/screen.service';
 
+
 @Directive({ selector: '[screenSizeSmall]' })
 export class ScreenSizeSmallDirective implements OnDestroy {
   private hasView = false;

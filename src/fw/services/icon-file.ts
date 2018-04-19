@@ -1,4 +1,4 @@
-export interface IconFiles {
+export interface IconFile {
     imageFile: string;
     alt: string;
     link: string;

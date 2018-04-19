@@ -1,7 +1,7 @@
 import { Directive, Input, OnInit, ElementRef, Renderer2 } from '@angular/core';
 
-
 import * as octicons from 'octicons';
+
 
 @Directive({ selector: '[octicon]' })
 export class OcticonDirective implements OnInit {

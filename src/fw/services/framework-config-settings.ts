@@ -1,4 +1,4 @@
-import { IconFiles } from "./icon-files";
+import { IconFile } from './icon-file';
 
 
 export interface FrameworkConfigSettings {
@@ -6,5 +6,5 @@ export interface FrameworkConfigSettings {
     showUserControls?: boolean;
     showStatusBar?: boolean;
     showStatusBarBreakpoint?: number;
-    socialIcons?: Array<IconFiles>;
+    socialIcons?: Array<IconFile>;
 }

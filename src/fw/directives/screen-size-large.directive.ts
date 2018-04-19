@@ -3,23 +3,24 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { ScreenService } from '../services/screen.service';
 
+
 @Directive({ selector: '[screenSizeLarge]' })
 export class ScreenSizeLargeDirective implements OnDestroy {
   private hasView = false;
-  private screenSubscription: Subscription;
+  private scrnSubscribe: Subscription;
 
   constructor(private viewContainer: ViewContainerRef,
     private template: TemplateRef<Object>,
-    private screenService: ScreenService) {
+    private scrnSvc: ScreenService) {
 
-    this.screenSubscription = screenService.resize$.subscribe(() => this.onResize());
+    this.scrnSubscribe = scrnSvc.resize$.subscribe(() => this.onResize());
 
   }
 
   @Input()
   set screenSizeLarge(condition) {
     // ignore the passed condition and set it based on screen size
-    condition = this.screenService.screenWidth >= this.screenService.largeBreakpoint;
+    condition = this.scrnSvc.screenWidth >= this.scrnSvc.largeBreakpoint;
 
     if (condition && !this.hasView) {
       this.hasView = true;
@@ -31,7 +32,7 @@ export class ScreenSizeLargeDirective implements OnDestroy {
   }
 
   ngOnDestroy() {
-    this.screenSubscription.unsubscribe();
+    this.scrnSubscribe.unsubscribe();
   }
 
   onResize() {
